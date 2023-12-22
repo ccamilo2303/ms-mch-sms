@@ -25,9 +25,5 @@ public class SmsController {
         return new ResponseEntity<>(response, HttpStatus.valueOf(response.getCode()));
     }
 
-    @GetMapping("/prueba")
-    public ResponseEntity<String> prueba(){
-        return new ResponseEntity<>("Prueba", HttpStatus.OK);
-    }
 
 }

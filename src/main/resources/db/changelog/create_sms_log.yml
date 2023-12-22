@@ -1,0 +1,40 @@
+databaseChangeLog:
+- changeSet:
+    id: log
+    author: cristian.beltran
+    changes:
+    - createTable:
+        tableName: sms_log
+        columns:
+        - column:
+            name: id
+            type: INT
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+              nullable: false
+        - column:
+            name: cartera
+            type: java.sql.Types.VARCHAR(45)
+            constraints:
+              nullable: false
+        - column:
+            name: telefono
+            type: java.sql.Types.VARCHAR(45)
+            constraints:
+              nullable: false
+        - column:
+            name: mensaje
+            type: java.sql.Types.VARCHAR(45)
+            constraints:
+              nullable: false
+        - column:
+            name: resultado
+            type: java.sql.Types.VARCHAR(45)
+            constraints:
+              nullable: false
+        - column:
+            name: fecha_envio
+            type: DATETIME2
+            constraints:
+              nullable: false
